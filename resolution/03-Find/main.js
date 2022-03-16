@@ -15,3 +15,14 @@ let users = [
   { id: 6, name: "romain" },
 ];
 
+const findUser = (name) => {
+  return users.find(u => u.name.toLowerCase() === name.toLowerCase());
+}
+
+const user = findUser('romain');
+
+if(user) {
+  console.log(`L'utilisateur ${user.name} est présent et possède l'ID ${user.id}`)
+} else {
+  console.log("Aucun utilisateur a été retrouvé");
+}
